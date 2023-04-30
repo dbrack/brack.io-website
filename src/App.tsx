@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		background: #24292e;
 		height: 100%;
-		margin: 0;
+		margin-top: 80px;
 		font: 16px Helvetica, sans-serif;
 		color: #efefef;
 		height: 50vh;

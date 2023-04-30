@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Section from './Section';
+import Avatar from './Avatar';
 
 const Title = styled.h1`
 	text-align: center;
@@ -27,12 +28,17 @@ const TagLine = styled.span`
 
 const Header = () => {
 	return (
-		<Section>
-			<Title>Dominik Brack</Title>
-			<TagLine>
-				Lifelong learner. Agile thinker. Passionate web developer.
-			</TagLine>
-		</Section>
+		<>
+			<Section>
+				<Avatar />
+			</Section>
+			<Section>
+				<Title>Dominik Brack</Title>
+				<TagLine>
+					Lifelong learner. Agile thinker. Passionate web developer.
+				</TagLine>
+			</Section>
+		</>
 	);
 };
 
