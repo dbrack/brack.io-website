@@ -36,7 +36,6 @@ const Navigation = () => {
 					<NavigationLink
 						href="https://linkedin.com/in/dominikbrack"
 						title="LinkedIn"
-						rel="me"
 					>
 						<LinkedInIcon />
 					</NavigationLink>
@@ -45,7 +44,6 @@ const Navigation = () => {
 					<NavigationLink
 						href="https://github.com/dbrack"
 						title="Github"
-						rel="me"
 					>
 						<GitHubIcon />
 					</NavigationLink>
@@ -54,7 +52,6 @@ const Navigation = () => {
 					<NavigationLink
 						href="https://twitter.com/_bracky"
 						title="Twitter"
-						rel="me"
 					>
 						<TwitterIcon />
 					</NavigationLink>
