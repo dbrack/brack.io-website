@@ -19,10 +19,10 @@ const GlobalStyle = createGlobalStyle`
 
 export function App() {
 	return (
-		<div className="App">
+		<>
 			<Header />
 			<Navigation />
 			<GlobalStyle />
-		</div>
+		</>
 	);
 }
