@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-export function App() {
+const App = () => {
 	return (
 		<>
 			<Header />
@@ -25,4 +25,6 @@ export function App() {
 			<GlobalStyle />
 		</>
 	);
-}
+};
+
+export default App;
