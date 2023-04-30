@@ -1,17 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-/* const CircularPicture = styled.picture`
-	width: 250px;
-	height: 150px;
-	border-radius: 50%;
-	overflow: hidden;
-
-	float: left;
-	margin-left: 125px;
-	margin-top: 20px;
-`; */
-
 const CircularPicture = styled.img`
 	border-radius: 50%;
 `;
