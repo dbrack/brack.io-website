@@ -7,11 +7,7 @@ const CircularPicture = styled.img`
 
 const Avatar = () => {
 	const avatar = new URL('./assets/portrait.jpeg?width=100', import.meta.url);
-	return (
-		<div>
-			<CircularPicture src={avatar.pathname} alt="Portrait" />
-		</div>
-	);
+	return <CircularPicture src={avatar.pathname} alt="Portrait" />;
 };
 
 export default Avatar;
