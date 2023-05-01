@@ -5,6 +5,7 @@ const Section = styled.section`
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	flex-direction: column;
 `;
 
 export default Section;

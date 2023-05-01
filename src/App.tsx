@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
 		background: #24292e;
 		font: 1rem Helvetica, sans-serif;
 		color: #efefef;
-		margin: 5rem 0 2rem;
+		margin: 5rem 1rem 2rem;
 		display: flex;
   		justify-content: center;
   		align-items: center;

@@ -35,8 +35,6 @@ const Header = () => {
 			</Section>
 			<Section>
 				<Title>Dominik Brack</Title>
-			</Section>
-			<Section>
 				<TagLine>
 					Lifelong learner. Agile thinker. Passionate Org-Designer
 					&amp; Web Developer.
