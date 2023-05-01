@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 const CircularPicture = styled.img`
 	border-radius: 50%;
+	wdith: 6.25rem;
+	height: 6.25rem;
 `;
 
 const Avatar = () => {
-	const avatar = new URL('./assets/portrait.jpeg?width=100', import.meta.url);
+	const avatar = new URL('./assets/portrait.jpeg?width=400', import.meta.url);
 	return <CircularPicture src={avatar.pathname} alt="Portrait" />;
 };
 
