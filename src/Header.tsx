@@ -5,24 +5,25 @@ import Avatar from './Avatar';
 
 const Title = styled.h1`
 	text-align: center;
-	width: 100%;
-	font-size: 3em;
+	font-size: 2rem;
+	margin-bottom: 0.1rem;
 `;
 
 const TagLine = styled.span`
-	font-size: 1em;
-	line-height: 20px;
+	font-size: 0.8rem;
+	line-height: 1.2rem;
+	display: block;
 	&::before {
 		content: open-quote;
 		font-weight: bolder;
 		color: rgba(255, 255, 255, 0.5);
-		font-size: 1.6em;
+		font-size: 1.6rem;
 	}
 	&::after {
 		content: close-quote;
 		font-weight: bolder;
 		color: rgba(255, 255, 255, 0.5);
-		font-size: 1.6em;
+		font-size: 1.6rem;
 	}
 `;
 
@@ -34,8 +35,11 @@ const Header = () => {
 			</Section>
 			<Section>
 				<Title>Dominik Brack</Title>
+			</Section>
+			<Section>
 				<TagLine>
-					Lifelong learner. Agile thinker. Passionate web developer.
+					Lifelong learner. Agile thinker. Passionate Org-Designer
+					&amp; Web Developer.
 				</TagLine>
 			</Section>
 		</>

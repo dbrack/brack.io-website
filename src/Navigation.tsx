@@ -4,18 +4,19 @@ import { TwitterIcon, GitHubIcon, LinkedInIcon, MastodonIcon } from './Icons';
 
 const StyledNavigation = styled.nav`
 	text-align: center;
-	font-size: 2em;
+	font-size: 2rem;
 	width: 100%;
 `;
 
 const NavigationList = styled.ul`
 	list-style: none;
+	padding: 0;
 `;
 
 const NavigationItem = styled.li`
 	display: inline-block;
-	width: 50px;
-	height: 50px;
+	width: 3rem;
+	height: 3rem;
 `;
 
 const NavigationLink = styled.a`
