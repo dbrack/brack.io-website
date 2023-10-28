@@ -5,10 +5,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 	body {
-		background: #24292e;
+		background: #161b22;
 		font: 1rem Helvetica, sans-serif;
 		color: #efefef;
-		margin: 5rem 1rem 2rem;
+		margin: 3rem 1rem 1rem;
 		display: flex;
   		justify-content: center;
   		align-items: center;
