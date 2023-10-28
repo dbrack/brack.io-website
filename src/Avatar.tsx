@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 const CircularPicture = styled.img`
 	border-radius: 50%;
-	wdith: 6.25rem;
-	height: 6.25rem;
+	height: 8rem;
 `;
 
 const Avatar = () => {

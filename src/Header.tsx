@@ -5,14 +5,16 @@ import Avatar from './Avatar';
 
 const Title = styled.h1`
 	text-align: center;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	margin-bottom: 0.1rem;
 `;
 
 const TagLine = styled.span`
-	font-size: 0.8rem;
-	line-height: 1.2rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	display: block;
+	overflow-wrap: break-word;
+	text-wrap: wrap;
 	&::before {
 		content: open-quote;
 		font-weight: bolder;
