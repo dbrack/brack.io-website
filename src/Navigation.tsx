@@ -51,19 +51,19 @@ const Navigation = () => {
 				</NavigationItem>
 				<NavigationItem>
 					<NavigationLink
-						href="https://twitter.com/_bracky"
-						title="Twitter"
-					>
-						<TwitterIcon />
-					</NavigationLink>
-				</NavigationItem>
-				<NavigationItem>
-					<NavigationLink
 						href="https://me.dm/@dbr"
 						title="Mastodon"
 						rel="me"
 					>
 						<MastodonIcon />
+					</NavigationLink>
+				</NavigationItem>
+				<NavigationItem>
+					<NavigationLink
+						href="https://twitter.com/_bracky"
+						title="Twitter"
+					>
+						<TwitterIcon />
 					</NavigationLink>
 				</NavigationItem>
 			</NavigationList>
