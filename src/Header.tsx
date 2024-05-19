@@ -38,8 +38,8 @@ const Header = () => {
 			<Section>
 				<Title>Dominik Brack</Title>
 				<TagLine>
-					Lifelong learner. Agile thinker. Passionate Org-Designer
-					&amp; Web Developer.
+					Lifelong learner. Agile thinker. Passionate Product Person
+					&amp; Software Engineer.
 				</TagLine>
 			</Section>
 		</>
