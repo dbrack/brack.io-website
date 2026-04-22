@@ -2,6 +2,9 @@
 	"name": "brack.io-website",
 	"description": "brack.io Website",
 	"private": true,
+	"engines": {
+		"node": "22.x"
+	},
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
