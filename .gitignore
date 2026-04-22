@@ -17,3 +17,9 @@ yarn-error.log*
 # IntelliJ project files
 .idea
 *.iml
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

@@ -1,23 +1,29 @@
 {
-	"name": "brack.io-website",
-	"description": "brack.io Website",
-	"private": true,
-	"engines": {
-		"node": "22.x"
-	},
-	"scripts": {
-		"dev": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview"
-	},
-	"devDependencies": {
-		"astro": "^5.0.0",
-		"prettier": "^2.8.8",
-		"typescript": "^5.9.0"
-	},
-	"prettier": {
-		"tabWidth": 4,
-		"useTabs": true,
-		"singleQuote": true
-	}
+  "name": "brack.io-website",
+  "description": "brack.io Website",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "astro": "^5.0.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.9.0",
+    "wrangler": "^4.84.1"
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "useTabs": true,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "12"
+  }
 }
