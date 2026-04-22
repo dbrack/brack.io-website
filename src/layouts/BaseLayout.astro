@@ -14,10 +14,13 @@ const { title, description, bodyClass } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<meta name="theme-color" content="#161b22" />
+		<meta name="color-scheme" content="dark" />
+		<meta name="theme-color" content="#1a2233" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
 	</head>
 	<body class={bodyClass}>
