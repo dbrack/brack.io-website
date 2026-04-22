@@ -1,17 +1,18 @@
 :root {
 	color-scheme: dark;
-	--bg: #141a22;
-	--bg-deep: #0f141d;
-	--bg-ink: #1a2233;
+	--bg-top: #0b1016;
+	--bg: #0d1117;
+	--bg-deep: #090d12;
+	--bg-ink: #101722;
 	--line: rgba(255, 255, 255, 0.1);
 	--line-strong: rgba(255, 255, 255, 0.16);
 	--text: #f3f3f1;
-	--muted: rgba(243, 243, 241, 0.72);
-	--soft: rgba(243, 243, 241, 0.48);
-	--accent: #b7cbff;
-	--accent-mint: rgba(128, 218, 196, 0.18);
-	--accent-gold: rgba(255, 213, 166, 0.16);
-	--glow: rgba(117, 147, 255, 0.16);
+	--muted: rgba(243, 243, 241, 0.68);
+	--soft: rgba(243, 243, 241, 0.42);
+	--accent: #c9d2e5;
+	--accent-mint: rgba(96, 138, 132, 0.1);
+	--accent-gold: rgba(196, 155, 110, 0.08);
+	--glow: rgba(88, 104, 147, 0.1);
 	--shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
 	--font-sans: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	--font-display:
@@ -30,12 +31,12 @@
 
 html {
 	min-height: 100%;
-	background-color: var(--bg-ink);
+	background-color: var(--bg-top);
 	background:
-		radial-gradient(circle at 50% 0%, var(--glow), transparent 34%),
-		radial-gradient(circle at 18% 12%, var(--accent-mint), transparent 28%),
-		radial-gradient(circle at 82% 20%, var(--accent-gold), transparent 30%),
-		linear-gradient(180deg, var(--bg-ink), transparent 28%),
+		linear-gradient(180deg, var(--bg-top) 0%, var(--bg-top) 10rem, var(--bg-ink) 24rem, var(--bg) 100%),
+		radial-gradient(circle at 50% 17rem, var(--glow), transparent 22rem),
+		radial-gradient(circle at 18% 18rem, var(--accent-mint), transparent 18rem),
+		radial-gradient(circle at 82% 24rem, var(--accent-gold), transparent 18rem),
 		var(--bg);
 }
 
@@ -62,12 +63,12 @@ body::after {
 }
 
 body::before {
-	top: 6rem;
+	top: 12rem;
 	left: 50%;
-	width: 20rem;
-	height: 20rem;
+	width: 18rem;
+	height: 18rem;
 	transform: translateX(-50%);
-	background: radial-gradient(circle, rgba(95, 121, 255, 0.15), transparent 68%);
+	background: radial-gradient(circle, rgba(73, 90, 136, 0.1), transparent 68%);
 }
 
 body::after {
@@ -75,7 +76,7 @@ body::after {
 	top: 26rem;
 	width: 14rem;
 	height: 14rem;
-	background: radial-gradient(circle, rgba(255, 208, 155, 0.09), transparent 72%);
+	background: radial-gradient(circle, rgba(182, 141, 95, 0.07), transparent 72%);
 }
 
 a {
@@ -93,9 +94,9 @@ img {
 	width: min(100% - 2rem, 43rem);
 	margin: 0 auto;
 	padding:
-		calc(3.35rem + env(safe-area-inset-top, 0px))
+		calc(2.9rem + env(safe-area-inset-top, 0px))
 		0
-		calc(4.25rem + env(safe-area-inset-bottom, 0px));
+		calc(4rem + env(safe-area-inset-bottom, 0px));
 	display: grid;
 	gap: 3rem;
 }
@@ -208,13 +209,13 @@ img {
 	width: 3.15rem;
 	height: 3.15rem;
 	border-radius: 999px;
-	border: 1px solid rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.03);
 	background:
-		linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+		linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
 	color: rgba(243, 243, 241, 0.58);
 	box-shadow:
-		inset 0 1px 0 rgba(255, 255, 255, 0.05),
-		0 8px 28px rgba(0, 0, 0, 0.16);
+		inset 0 1px 0 rgba(255, 255, 255, 0.035),
+		0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .profile-links__icon {
@@ -239,11 +240,11 @@ img {
 .profile-links__link:hover,
 .profile-links__link:focus-visible {
 	background:
-		linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
-	border-color: rgba(255, 255, 255, 0.12);
+		linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.03));
+	border-color: rgba(255, 255, 255, 0.09);
 	box-shadow:
-		inset 0 1px 0 rgba(255, 255, 255, 0.06),
-		0 14px 32px rgba(0, 0, 0, 0.18);
+		inset 0 1px 0 rgba(255, 255, 255, 0.045),
+		0 14px 32px rgba(0, 0, 0, 0.22);
 }
 
 .profile-links__link:hover .profile-links__icon,
@@ -367,17 +368,26 @@ a:focus-visible {
 }
 
 @media (max-width: 640px) {
+	html {
+		background:
+			linear-gradient(180deg, var(--bg-top) 0%, var(--bg-top) 9.5rem, var(--bg-ink) 21rem, var(--bg) 100%),
+			radial-gradient(circle at 50% 15.5rem, var(--glow), transparent 16rem),
+			radial-gradient(circle at 18% 16rem, var(--accent-mint), transparent 13rem),
+			radial-gradient(circle at 82% 20rem, var(--accent-gold), transparent 13rem),
+			var(--bg);
+	}
+
 	.home {
 		width: min(100% - 1.5rem, 42rem);
 		padding:
-			calc(2.35rem + env(safe-area-inset-top, 0px))
+			calc(1.15rem + env(safe-area-inset-top, 0px))
 			0
 			calc(2.8rem + env(safe-area-inset-bottom, 0px));
 		gap: 2.5rem;
 	}
 
 	.hero__portrait {
-		width: 8.1rem;
+		width: 7.7rem;
 	}
 
 	.profile-links__list {
