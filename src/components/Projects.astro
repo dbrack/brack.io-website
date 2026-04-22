@@ -1,0 +1,28 @@
+---
+import { projects } from '../data/projects';
+---
+
+<section class="projects" aria-labelledby="projects-title">
+	<div class="section-heading">
+		<p class="section-heading__eyebrow">Selected work</p>
+		<h2 id="projects-title">Projects</h2>
+	</div>
+
+	<ul class="project-list">
+		{
+			projects.map((project) => (
+				<li class="project-list__item">
+					<article>
+						<h3>
+							<a href={project.href}>
+								{project.title}
+								<span aria-hidden="true">↗</span>
+							</a>
+						</h3>
+						<p>{project.description}</p>
+					</article>
+				</li>
+			))
+		}
+	</ul>
+</section>

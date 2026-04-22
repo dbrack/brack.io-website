@@ -1,0 +1,21 @@
+---
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import Projects from '../components/Projects.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Dominik Brack | Product Person & Software Engineer';
+const description =
+	'Personal website of Dominik Brack, product-minded software engineer and creator of Masqer, a privacy-first image redaction and masking app.';
+---
+
+<BaseLayout title={title} description={description}>
+	<main class="home">
+		<section class="intro" aria-labelledby="intro-title">
+			<Header />
+			<Navigation />
+		</section>
+
+		<Projects />
+	</main>
+</BaseLayout>

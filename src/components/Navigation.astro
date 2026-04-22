@@ -1,0 +1,48 @@
+---
+import ProfileIcon from './ProfileIcon.astro';
+
+const links = [
+	{
+		label: 'LinkedIn',
+		icon: 'linkedin',
+		href: 'https://linkedin.com/in/dominikbrack',
+	},
+	{
+		label: 'GitHub',
+		icon: 'github',
+		href: 'https://github.com/dbrack',
+	},
+	{
+		label: 'Mastodon',
+		icon: 'mastodon',
+		href: 'https://me.dm/@dbr',
+		rel: 'me',
+	},
+	{
+		label: 'Twitter',
+		icon: 'twitter',
+		href: 'https://twitter.com/_bracky',
+	},
+];
+---
+
+<nav class="profile-links" aria-label="Profile links">
+	<ul class="profile-links__list">
+		{
+			links.map((link) => (
+				<li class="profile-links__item">
+					<a
+						class="profile-links__link"
+						href={link.href}
+						rel={link.rel}
+						aria-label={link.label}
+						title={link.label}
+					>
+						<ProfileIcon name={link.icon} />
+						<span class="sr-only">{link.label}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>

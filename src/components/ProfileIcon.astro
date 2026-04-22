@@ -1,0 +1,30 @@
+---
+import github from '../assets/social/github.svg';
+import linkedin from '../assets/social/linkedin.svg';
+import mastodon from '../assets/social/mastodon.svg';
+import twitter from '../assets/social/twitter.svg';
+
+interface Props {
+	name: 'linkedin' | 'github' | 'mastodon' | 'twitter';
+}
+
+const { name } = Astro.props;
+
+const icons = {
+	linkedin,
+	github,
+	mastodon,
+	twitter,
+};
+---
+
+<img
+	class="profile-links__icon"
+	src={icons[name].src}
+	alt=""
+	aria-hidden="true"
+	width="24"
+	height="24"
+	loading="eager"
+	decoding="async"
+/>
