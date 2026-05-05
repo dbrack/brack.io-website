@@ -7,7 +7,7 @@ export interface Project {
 export const projects: Project[] = [
 	{
 		title: 'Masqer',
-		description: 'Privacy-first image redaction and masking app.',
+		description: 'Hide details before you share.',
 		href: 'https://masqer.app',
 	},
 ];
