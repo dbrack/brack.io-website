@@ -7,9 +7,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'Dominik Brack | Product Person & Software Engineer';
 const description =
 	'Personal website of Dominik Brack, product-minded software engineer and creator of Masqer, a privacy-first image redaction and masking app.';
+
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Dominik Brack',
+	url: 'https://brack.io/',
+	jobTitle: 'Product Person & Software Engineer',
+	sameAs: [
+		'https://linkedin.com/in/dominikbrack',
+		'https://github.com/dbrack',
+		'https://me.dm/@dbr',
+		'https://twitter.com/_bracky',
+	],
+};
 ---
 
 <BaseLayout title={title} description={description}>
+	<script slot="head" type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 	<main class="home">
 		<section class="intro" aria-labelledby="intro-title">
 			<Header />

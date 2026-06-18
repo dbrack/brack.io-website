@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import portrait from '../assets/portrait.jpeg';
 
 interface Props {
 	title: string;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 const { title, description, bodyClass } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(portrait.src, Astro.site);
 ---
 
 <!doctype html>
@@ -17,11 +20,26 @@ const { title, description, bodyClass } = Astro.props;
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
 		<meta name="color-scheme" content="dark" />
 		<meta name="theme-color" content="#0b1016" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+		<link rel="canonical" href={canonicalURL} />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="brack.io" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content={socialImageURL} />
+		<meta property="og:image:width" content={portrait.width.toString()} />
+		<meta property="og:image:height" content={portrait.height.toString()} />
+		<meta property="og:image:alt" content="Portrait of Dominik Brack" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={socialImageURL} />
+		<slot name="head" />
 	</head>
 	<body class={bodyClass}>
 		<slot />

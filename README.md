@@ -1,6 +1,6 @@
 # brack.io Website
 
-Personal [brack.io website](http://brack.io)
+Personal [brack.io website](https://brack.io)
 
 ## Dev Setup
 
@@ -9,6 +9,16 @@ Run `npm install` once, then use:
 - `npm run dev` to start the Astro dev server
 - `npm run build` to create the production build in `dist/`
 - `npm run preview` to preview the production build locally
+
+## Search indexing
+
+The production build generates a sitemap at
+`https://brack.io/sitemap-index.xml` and publishes a crawl policy at
+`https://brack.io/robots.txt`.
+
+After verifying the domain through DNS, submit
+`https://brack.io/sitemap-index.xml` under **Sitemaps** in Google Search
+Console.
 
 ## Cloudflare Pages
 
