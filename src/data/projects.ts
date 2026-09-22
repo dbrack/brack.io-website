@@ -11,9 +11,9 @@ export const projects: Project[] = [
 		href: 'https://masqer.app',
 	},
 	{
-		title: 'Cilia',
+		title: 'Cillia',
 		description: 'Capturing life, together.',
-		href: 'https://cilia.life/',
+		href: 'https://cillia.life',
 	},
 	{
 		title: 'FacetSync',
