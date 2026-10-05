@@ -359,6 +359,31 @@ img {
 	line-height: 1.65;
 }
 
+.friends .section-heading h2 {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.friends__intro {
+	margin: 0;
+	color: var(--muted);
+	font-size: 0.95rem;
+	line-height: 1.65;
+}
+
+.project-list--friends .project-list__item {
+	border-bottom: 0;
+}
+
+.project-list--friends h3 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.project-list--friends p {
+	font-size: 0.95rem;
+}
+
 a:focus-visible {
 	outline: 2px solid var(--accent);
 	outline-offset: 0.3rem;
@@ -419,7 +444,8 @@ a:focus-visible {
 		gap: 2.5rem;
 	}
 
-	.projects {
+	.projects,
+	.friends {
 		padding-left: 0.15rem;
 		padding-right: 0.15rem;
 	}
