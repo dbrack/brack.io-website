@@ -359,6 +359,10 @@ img {
 	line-height: 1.65;
 }
 
+.friends {
+	margin-top: 0.75rem;
+}
+
 .friends .section-heading h2 {
 	font-size: 1.25rem;
 	font-weight: 600;
@@ -373,6 +377,14 @@ img {
 
 .project-list--friends .project-list__item {
 	border-bottom: 0;
+}
+
+.project-list--friends .project-list__item + .project-list__item {
+	padding-top: 1.3rem;
+}
+
+.project-list--friends article {
+	gap: 0.25rem;
 }
 
 .project-list--friends h3 {
