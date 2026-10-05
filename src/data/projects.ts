@@ -6,14 +6,14 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
-		title: 'Masqer',
-		description: 'Hide details before you share.',
-		href: 'https://masqer.app',
-	},
-	{
 		title: 'Cillia',
 		description: 'Capturing life, together.',
 		href: 'https://cillia.life',
+	},
+	{
+		title: 'Masqer',
+		description: 'Hide details before you share.',
+		href: 'https://masqer.app',
 	},
 	{
 		title: 'FacetSync',
