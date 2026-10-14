@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import SiteIdentity from '../components/SiteIdentity.astro';
 import Navigation from '../components/Navigation.astro';
 import Projects from '../components/Projects.astro';
 import Friends from '../components/Friends.astro';
@@ -28,6 +29,7 @@ const structuredData = {
 	<script slot="head" type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 	<main class="home">
 		<section class="intro" aria-labelledby="intro-title">
+			<SiteIdentity />
 			<Header />
 			<Navigation />
 		</section>
