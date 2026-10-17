@@ -16,8 +16,8 @@ Run `npm install` once, then use:
 The supplied artwork lives in `brand-waypoint-assets/`. Published copies in
 `public/brand/` retain the supplied geometry and bytes. The header uses the
 transparent SVGs; the portrait, site copy, project lists, and navigation are
-unchanged. `public/favicon.svg` adds a system color-scheme media query to the
-supplied favicon geometry. PNG and ICO fallbacks, an Apple touch icon, and
+unchanged. The supplied dark/light SVG favicons are referenced directly and
+switched by the existing theme script. PNG and ICO fallbacks, an Apple touch icon, and
 192/512px manifest icons are also provided. Manifest icons use the dark variant.
 
 The theme control shows three visible icons: a monitor for Automatic (system),
@@ -65,6 +65,26 @@ Integration verification (2026-10-14):
   Cloudflare adapter warning about runtime image optimization. Browser checks
   used the Astro development server because sandbox restrictions prevented the
   separate production preview from binding its ports.
+
+## Approved asset refresh (2026-10-17)
+
+The corrected external asset pack is consolidated in `brand-waypoint-assets/`.
+Its SVGs, PNGs, ICO, social preview, and supplied README are preserved byte for
+byte. The pack is flat despite the folder prefixes in its supplied README.
+The `@2048` raster masters replace the obsolete `-1024` files; proof renders
+remain source references. Only assets used by the site are copied into
+`public/brand/`; unused 48px and light 192/512px public copies were removed.
+The ICO now contains 16px and 32px images, reflected in the layout metadata.
+The obsolete custom adaptive SVG favicon was removed; the layout defaults to
+the supplied dark SVG and the theme script selects the matching supplied SVG
+for Dark, Light, or Automatic mode.
+
+Both header themes and their favicon/touch-icon links were checked in the
+browser. The social preview remains exactly 1200 × 630 and both social metadata
+URLs remain `https://brack.io/brand/social-preview-1200x630.png`. Asset equality
+and SVG geometry tests now validate the corrected pack. Supplied SVG whitespace
+is preserved deliberately, including trailing spaces on the blank second line
+of the two logo masters.
 
 ## Search indexing
 

@@ -1,9 +1,18 @@
-# brack.io — The Waypoint asset pack
+# brack.io Waypoint clean-curve assets
 
-- `waypoint-dark.svg`, `waypoint-light.svg`: transparent vector logo artwork (dark/light refers to the intended background).
-- `waypoint-*-1024.png`: high-resolution transparent raster logo.
-- `favicon-*.svg`, `favicon-*-{16,32,48,180,192,512}.png`: themed square icon assets.
-- `favicon.ico`: legacy fallback.
-- `social-preview-1200x630.png`: no portrait, no new slogan.
+Rebuilt from the approved Option A reference using clean spline-based vector paths rather than the earlier jagged autotrace.
 
-Palette: #121212 charcoal, #F5F2ED ivory, #C7835A copper.
+Files included:
+- `logo/waypoint-dark.svg`
+- `logo/waypoint-light.svg`
+- `logo/waypoint-dark@2048.png`
+- `logo/waypoint-light@2048.png`
+- `favicon/` dark and light SVG/PNG variants
+- `preview/` proof renders on dark/light backgrounds
+
+Palette:
+- Charcoal `#121212`
+- Ivory `#F5F2ED`
+- Copper `#C7835A`
+
+ViewBox: `0 0 277 471`

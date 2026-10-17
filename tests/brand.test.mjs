@@ -22,44 +22,23 @@ test('all published supplied assets remain byte-identical to the approved pack',
 	);
 });
 
-test('both logo themes and all SVG favicon variants share exactly the same contours and dot', () => {
-	const expected = geometry(
-		read('brand-waypoint-assets/waypoint-dark.svg').toString()
-	);
+test('both logo themes and supplied SVG favicons share the approved contours and dot', () => {
+	const master = read('brand-waypoint-assets/waypoint-dark.svg').toString();
+	const expected = geometry(master);
+	const dot = master.match(/<circle\b[^>]*>/)[0];
 	assert.equal(expected.length, 2);
 	for (const file of [
-		'brand/waypoint-light.svg',
-		'brand/favicon-dark.svg',
-		'brand/favicon-light.svg',
-		'favicon.svg',
+		'waypoint-dark.svg',
+		'waypoint-light.svg',
+		'favicon-dark.svg',
+		'favicon-light.svg',
 	]) {
-		assert.deepEqual(
-			geometry(read(`public/${file}`).toString()),
-			expected,
-			file
-		);
-		const svg = read(`public/${file}`).toString();
-		const circle = svg.match(
-			/<circle cx="([\d.]+)" cy="([\d.]+)" r="([\d.]+)"/
-		);
-		// Favicons place the path group at (119, 36) with a uniform .89 scale;
-		// their dot is outside that group and already has the transform applied.
-		const favicon = file.includes('favicon');
-		if (favicon)
-			assert.match(
-				svg,
-				/transform="translate\(119 36\) scale\(\.89 \.89\)"/
-			);
-		const dot = favicon
-			? [119 + 186 * 0.89, 36 + 214 * 0.89, 35 * 0.89]
-			: [186, 214, 35];
-		for (let i = 0; i < 3; i++)
-			assert.ok(Math.abs(Number(circle[i + 1]) - dot[i]) < 0.0001, file);
+		const svg = read(`public/brand/${file}`).toString();
+		assert.deepEqual(geometry(svg), expected, file);
+		assert.equal(svg.match(/<circle\b[^>]*>/)[0], dot, file);
+		assert.match(svg, /viewBox="0 0 277 471"/, file);
+		assert.doesNotMatch(svg, /transform=/, file);
 	}
-	assert.match(
-		read('public/favicon.svg').toString(),
-		/@media\(prefers-color-scheme:light\)/
-	);
 });
 
 test('social preview has the promised dimensions and manifest icons exist at declared sizes', () => {
