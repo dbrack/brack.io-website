@@ -11,4 +11,9 @@ export const friends: Project[] = [
 		description: 'Swiss municipality data from official sources — from postal codes and taxes to votes, energy and more.',
 		href: 'https://gmeind.ch/',
 	},
+	{
+		title: 'Thirtyful',
+		description: 'A calm planning tool for independent work, built around what can realistically fit into today.',
+		href: 'https://thirtyful.com',
+	},
 ];
