@@ -4,6 +4,7 @@ Personal [brack.io website](https://brack.io)
 
 ## Dev Setup
 
+Use Node 22.23.4 or newer (the deployment version is pinned in `.node-version`).
 Run `npm install` once, then use:
 
 - `npm run dev` to start the Astro dev server
@@ -110,9 +111,28 @@ Use these Pages settings:
 
 Notes:
 
-- The repo includes a `.node-version` file pinned to Node `22`, which Cloudflare
+- The repo includes a `.node-version` file pinned to Node `22.23.4`, which Cloudflare
   Pages supports via its build image.
-- No Astro Cloudflare adapter or Wrangler config is required for this site,
-  because it is deployed as pre-rendered static assets.
+- No Astro Cloudflare adapter is required because every page is pre-rendered.
+  The included Wrangler config serves the same `dist/` assets for local preview
+  and the optional `npm run deploy` Workers deployment; Pages uses the settings above.
 - If you are deploying from an older existing Pages project, make sure it uses a
-  modern Pages build image so Node 22 is available.
+  modern Pages build image so Node 22.23.4 is available.
+
+## Astro 7 upgrade (2026-10-22)
+
+Astro, Sitemap, TypeScript, Prettier, and Wrangler are updated to their latest
+stable releases. The unused Cloudflare server adapter was removed to preserve
+the static `dist/` output and Pages compatibility. Wrangler now serves static
+assets without a Worker entrypoint and returns 404 for unknown paths.
+`compressHTML: true` preserves the previous HTML whitespace behavior through
+the Astro 7 compiler migration.
+
+Verified on Node 24.15.0: production build, TypeScript check, nine existing tests,
+and Wrangler deployment dry run pass. The production preview matches the prior
+header, hero, project section, and Friends heading geometry and typography at
+320, 390, 768, and 1440px in both themes, with no horizontal overflow or missing
+images. Keyboard theme selection, reload persistence, automatic theme selection,
+all existing link destinations, TalkBeamer's link and description, 20 local asset
+and metadata routes, and unknown-path 404 handling were checked. No browser
+console errors, outdated direct dependencies, or npm audit vulnerabilities remain.

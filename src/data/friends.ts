@@ -16,4 +16,9 @@ export const friends: Project[] = [
 		description: 'A calm planning tool for independent work, built around what can realistically fit into today.',
 		href: 'https://thirtyful.com',
 	},
+	{
+		title: 'TalkBeamer',
+		description: 'Use TalkBeamer to present the slides you created using the LaTeX Beamer template from your iPad or iPhone.',
+		href: 'https://alabor.me/talkbeamer/',
+	},
 ];
